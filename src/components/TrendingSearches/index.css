@@ -1,0 +1,11 @@
+#LazyTrending section{
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+}
+
+#LazyTrending section ul{
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+}

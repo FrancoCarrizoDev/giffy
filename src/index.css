@@ -1,0 +1,39 @@
+body {
+  padding: 16px;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(21, 72, 122);
+  color: white;
+}
+
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;     /* Tamaño del scroll en vertical */
+  height: 8px;    /* Tamaño del scroll en horizontal */
+  background-color: #333;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+/* Cambiamos el fondo cuando esté en active */
+body::-webkit-scrollbar-thumb:hover{
+  background-color: #f1eded;
+}
+body::-webkit-scrollbar-thumb:active {
+  background-color: white;
+}
+
+
