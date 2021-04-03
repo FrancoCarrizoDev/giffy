@@ -1,25 +1,25 @@
-import React, {useCallback} from 'react';
+import React, { useCallback } from 'react';
 import { useLocation } from "wouter"
 import ListOfGifs from '../../components/ListOfGifs/ListOfGifs';
-import {useGifs} from '../../hooks/useGifs';
+import { useGifs } from '../../hooks/useGifs';
 import TrendingSearches from '../../components/TrendingSearches';
 import SearchForm from 'components/SearchForm'
 
-export default function Home(){
+export default function Home() {
     const [path, pushLocation] = useLocation();
-    const {loading, gifs } = useGifs()
-    
-    const handleSubmit = useCallback(({keyword}) => {
-        pushLocation(`/search/${keyword}`)
-    },[pushLocation])
+    const { loading, gifs } = useGifs()
 
-    return(
+    const handleSubmit = useCallback(({ keyword }) => {
+        pushLocation(`/search/${keyword}`)
+    }, [pushLocation])
+
+    return (
         <div className="home-container">
-            <SearchForm onSubmit={handleSubmit}/>
+            <SearchForm onSubmit={handleSubmit} />
             <h3>Última búsqueda</h3>
-            <ListOfGifs gifs={gifs}/>
+            <ListOfGifs gifs={gifs} />
             <div>
-            <TrendingSearches/>
+                <TrendingSearches />
             </div>
         </div>
     )
