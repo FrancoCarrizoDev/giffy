@@ -4,6 +4,7 @@ export default function useTitle({description, title}){
     const prevTitle = useRef(document.title)
     const prevDescription = useRef(document.querySelector('meta[name="description"]').getAttribute('content'))
 
+    
     useEffect(() => {
         const previousDescription = prevDescription.current
         const metaDescription = document.querySelector('meta[name="description"]')
